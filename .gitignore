@@ -4,7 +4,6 @@
 
 # Xcode
 #
-build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -13,10 +12,9 @@ build/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
+xcuserdata/
 *.xccheckout
 *.moved-aside
-DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
@@ -57,7 +55,6 @@ yarn-error.log
 *.jsbundle
 
 # Ruby / CocoaPods
-**/Pods/
 /vendor/bundle/
 
 # Temporary files created by Metro to check the health of the file watcher
@@ -73,3 +70,26 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Added 
+
+# --- Recommended React Native overrides ---
+
+# Keep Podfile.lock (needed for reproducible iOS builds)
+!ios/Podfile.lock
+
+# Keep Pods (React Native >= 0.70 expects Pods in source control)
+!ios/Pods/
+
+# Watchman config should be committed
+.watchmanconfig
+
+# Ignore build artifacts (if not already covered)
+android/app/build/
+
+# Environment variables
+.env
+.env.*
+
+# Additional iOS artifacts
+ios/DerivedData/
