@@ -79,13 +79,17 @@ yarn-error.log
 !ios/Podfile.lock
 
 # Keep Pods (React Native >= 0.70 expects Pods in source control)
-!ios/Pods/
+# !ios/Pods/
+# Avoid tracking 8,000+ files in ios/Pods
+ios/Pods/
 
 # Watchman config should be committed
 .watchmanconfig
 
 # Ignore build artifacts (if not already covered)
 android/app/build/
+android/build/
+ios/build/
 
 # Environment variables
 .env
@@ -93,3 +97,4 @@ android/app/build/
 
 # Additional iOS artifacts
 ios/DerivedData/
+# ios/build/
